@@ -1,6 +1,12 @@
  sudo apt-get awscli
  sudo apt-get install awscli
   
+ EC2 to S3 upload
+ 
 ubuntu@ip-172-31-82-157:~/ML_test_deploy$ aws s3 cp  age_of_marriage_data.csv s3://test-bucket-for-etl
 upload: ./age_of_marriage_data.csv to s3://test-bucket-for-etl/age_of_marriage_data.csv
 
+S3 to EC2 download
+ubuntu@ip-172-31-82-157:~/ML_test_deploy$ aws s3 cp s3://test-bucket-for-etl/source/SalesJan2009.csv /home/ubuntu/ML_test_
+deploy
+download: s3://test-bucket-for-etl/source/SalesJan2009.csv to ./SalesJan2009.csv
